@@ -18,6 +18,24 @@ pip install -r requirements.txt
 
 ## Reproducing the Analysis
 
+### Fetch Resources
+Download essential chemical property datasets from OSF (Required as `data/raw` is not version controlled).
+```bash
+python fetch_resources.py
+```
+
+### Literature Mining
+Mine Europe PMC for new protein-ligand associations. 
+Define your search queries in `queries.txt` (format: `Name, "Search Query"`).
+Example:
+```text
+ITC, "isothermal titration calorimetry" AND ("protein-ligand binding" OR "binding affinity")
+```
+Run the miner:
+```bash
+python literature_mining.py
+```
+
 ### Data Processing
 ```bash
 python data_processing.py -i data/interim -t folder
