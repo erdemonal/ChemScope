@@ -1,0 +1,4 @@
+Total Compounds: 6448
+Ligands: 2396
+Buffers: 362
+Solvents: 32

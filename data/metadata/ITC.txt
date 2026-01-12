@@ -1,0 +1,7 @@
+metadata for ITC
+query: "isothermal titration calorimetry" AND ("protein-ligand binding" OR "binding constant" OR "affinity measurement")
+search date: 2026-01-12
+number of papers: 3380
+number of chemicals: 279701
+number of unique chemicals: 8781 (note: not all chemicals can be plotted due to missing logP values)
+publication years range: 1989 - 2026

@@ -1,0 +1,6 @@
+Chemical Type Assignment Log
+============================
+ChemicalType
+ligand     17462
+solvent    15704
+buffer      5462

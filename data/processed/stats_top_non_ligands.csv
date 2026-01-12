@@ -1,0 +1,51 @@
+Technique,Entity,Count,Role
+CE,1-phenylethylamine,1,Solvent/Reagent
+CE,2-Chlorophenylhydrazine hydrochloride,1,Buffer
+CE,3-Aminopropanesulfonate,1,Buffer/Salt
+CE,5-azacytidine,1,Potential Ligand
+CE,Acid amide,1,Solvent/Reagent
+CE,agarose,1,Solvent/Reagent
+CE,aliphatic alcohol,1,Solvent/Reagent
+CE,Alkylamide,1,Solvent/Reagent
+CE,amantadine hydrochloride,1,Buffer
+CE,amidine,1,Solvent/Reagent
+ED,adefovir,1,Potential Ligand
+ED,agarose,1,Solvent/Reagent
+ED,aliphatic alcohol,1,Solvent/Reagent
+ED,amidine,1,Solvent/Reagent
+ED,amikacin,1,Potential Ligand
+ED,amiodarone,1,Potential Ligand
+ED,amphetamine,1,Solvent/Reagent
+ED,amphotericin B,1,Potential Ligand
+ED,Apotransferrin,1,Solvent/Reagent
+ED,Arylamide,1,Solvent/Reagent
+ITC,(L-Seryl)adenylate,1,Potential Ligand
+ITC,1-phenylethylamine,1,Solvent/Reagent
+ITC,2-Chlorophenylhydrazine hydrochloride,1,Buffer
+ITC,2-Formaminobenzoylacetate,1,Buffer
+ITC,isethionic acid,1,Buffer/Salt
+ITC,2-hydroxyethylphosphonic acid,1,Buffer/Salt
+ITC,2-hydroxypropylphosphonic acid,1,Buffer/Salt
+ITC,sophorose,1,Potential Ligand
+ITC,3-(methylthio)propionic acid,1,Solvent/Reagent
+ITC,3-Aminopropanesulfonate,1,Buffer/Salt
+SPR,mannotetraose,2,Potential Ligand
+SPR,ethylmalonic acid,1,Solvent/Reagent
+SPR,pyridoxal 5'-phosphate(2-),1,Buffer
+SPR,daptomycin,1,Potential Ligand
+SPR,micafungin,1,Potential Ligand
+SPR,pyrraline,1,Solvent/Reagent
+SPR,enfuvirtide,1,Potential Ligand
+SPR,L-canavanine,1,Potential Ligand
+SPR,cocaine hydrochloride,1,Buffer
+SPR,benzyl chloride,1,Buffer
+UV,"1,4-dithiane",1,Solvent/Reagent
+UV,1-phenylethylamine,1,Solvent/Reagent
+UV,"2,2'-iminodipropanoic acid",1,Potential Ligand
+UV,2-Chlorophenylhydrazine hydrochloride,1,Buffer
+UV,2-deoxystreptamine 4-phosphate,1,Buffer
+UV,2-hydroxybutyric acid,1,Solvent/Reagent
+UV,3-Aminopropanesulfonate,1,Buffer/Salt
+UV,4-hydroxystyrene,1,Solvent/Reagent
+UV,acarbose,1,Potential Ligand
+UV,adefovir,1,Potential Ligand

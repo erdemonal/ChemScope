@@ -1,0 +1,14 @@
+2026-01-12 21:05:56,176 - INFO - Starting Interactive Visualization Pipeline...
+2026-01-12 21:05:56,176 - INFO - Processing 5 files.
+2026-01-12 21:05:56,291 - INFO - Processing query: CE
+2026-01-12 21:05:56,294 - INFO - Using 2449 compounds for CE
+2026-01-12 21:05:57,158 - INFO - Processing query: ED
+2026-01-12 21:05:57,159 - INFO - Using 2220 compounds for ED
+2026-01-12 21:05:57,928 - INFO - Processing query: ITC
+2026-01-12 21:05:57,930 - INFO - Using 6053 compounds for ITC
+2026-01-12 21:05:59,372 - INFO - Processing query: SPR
+2026-01-12 21:05:59,375 - INFO - Using 12209 compounds for SPR
+2026-01-12 21:06:01,589 - INFO - Processing query: UV
+2026-01-12 21:06:01,590 - INFO - Using 4395 compounds for UV
+2026-01-12 21:06:02,659 - INFO - Using 2449 compounds for CE
+2026-01-12 21:06:06,341 - INFO - Visualization completed key generated in 0:00:10.164771.
