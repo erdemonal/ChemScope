@@ -1,8 +1,7 @@
 # ChemScope
 
-This repository contains the code used in the study  
-“Text Mining-Based Profiling of Chemical Environments in Protein–Ligand Binding Assays Across Analytical Techniques.”
-
+This repository contains the code used in the study "Text Mining-Based Profiling of Chemical Environments in Protein–Ligand Binding Assays Across Analytical Techniques."
+  
 The scripts implement processing of literature data, physicochemical descriptor calculation, and chemometric analyses used to compare ligand chemical space across experimental techniques.
 
 ## Requirements
