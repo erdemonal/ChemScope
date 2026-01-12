@@ -1,0 +1,4 @@
+figures/*.html linguist-generated=true
+plots/*.html linguist-generated=true
+data/**/*.html linguist-generated=true
+*.html linguist-generated=true
