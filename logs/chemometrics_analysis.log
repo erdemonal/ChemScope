@@ -1,31 +1,31 @@
-2026-01-12 21:09:05,656 - INFO - Pipeline started.
-2026-01-12 21:09:05,656 - INFO - Found 5 data files.
-2026-01-12 21:09:05,673 - INFO - Loaded CE: 3687 compounds
-2026-01-12 21:09:05,688 - INFO - Loaded ED: 3294 compounds
-2026-01-12 21:09:05,743 - INFO - Loaded ITC: 8771 compounds
-2026-01-12 21:09:05,827 - INFO - Loaded SPR: 16428 compounds
-2026-01-12 21:09:05,852 - INFO - Loaded UV: 6448 compounds
-2026-01-12 21:09:05,855 - INFO - Total consolidated entries: 38628
-2026-01-12 21:09:05,855 - INFO - Starting Bias Analysis (Ubiquitious Chemicals).
-2026-01-12 21:09:06,050 - INFO - Total Unique Chemicals Analyzed: 18390
-2026-01-12 21:09:06,051 - INFO - Ubiquitous Chemicals (Present in ALL 5 techniques): 1590
-2026-01-12 21:09:06,057 - INFO - List of ubiquitous chemicals saved to 'data/processed/bias_ubiquitous_chemicals.csv'.
-2026-01-12 21:09:06,057 - INFO - Starting Non-Ligand Frequency Analysis.
-2026-01-12 21:09:06,060 - INFO - Total Non-Ligands identified: 22934
-2026-01-12 21:09:06,099 - INFO - Top non-ligand statistics saved to 'data/processed/stats_top_non_ligands.csv'.
-2026-01-12 21:09:06,100 - INFO - Starting PCA Analysis.
-2026-01-12 21:09:06,105 - INFO - Filtering for 'Ligand' role: 15694 compounds remain.
-2026-01-12 21:09:06,107 - INFO - Data points available after removing NaNs: 14981
-2026-01-12 21:09:06,110 - INFO - Explained Variance: PC1=0.58, PC2=0.22
-2026-01-12 21:09:06,110 - INFO - PCA Loadings computed.
-2026-01-12 21:09:06,924 - INFO - PCA plots saved to 'figures/chemometrics/'
-2026-01-12 21:09:06,924 - INFO - Starting K-Means Clustering Analysis.
-2026-01-12 21:09:08,790 - INFO - Clustering heatmap saved.
-2026-01-12 21:09:08,792 - INFO - Cluster Center Characteristics computed.
-2026-01-12 21:09:08,793 - INFO - Starting Statistical Hypothesis Testing.
-2026-01-12 21:09:08,798 - INFO - Comparing techniques: ['CE' 'ED' 'ITC' 'SPR' 'UV']
-2026-01-12 21:09:08,803 - INFO - Mass       | ANOVA F= 19.29 | p=7.55e-16 ***
-2026-01-12 21:09:09,056 - INFO - logP       | ANOVA F=  6.06 | p=7.15e-05 ***
-2026-01-12 21:09:09,305 - INFO - TPSA       | ANOVA F=  9.03 | p=2.81e-07 ***
-2026-01-12 21:09:09,540 - INFO - Statistical test results saved to 'data/processed/stats_significance_tests.csv'.
-2026-01-12 21:09:09,541 - INFO - Analysis completed successfully.
+2026-01-16 14:53:36,029 - INFO - Pipeline started.
+2026-01-16 14:53:36,030 - INFO - Found 5 data files.
+2026-01-16 14:53:36,050 - INFO - Loaded CE: 3687 compounds
+2026-01-16 14:53:36,067 - INFO - Loaded ED: 3294 compounds
+2026-01-16 14:53:36,110 - INFO - Loaded ITC: 8771 compounds
+2026-01-16 14:53:36,184 - INFO - Loaded SPR: 16428 compounds
+2026-01-16 14:53:36,213 - INFO - Loaded UV: 6448 compounds
+2026-01-16 14:53:36,216 - INFO - Total consolidated entries: 38628
+2026-01-16 14:53:36,216 - INFO - Starting Bias Analysis (Ubiquitious Chemicals).
+2026-01-16 14:53:36,454 - INFO - Total Unique Chemicals Analyzed: 18390
+2026-01-16 14:53:36,454 - INFO - Ubiquitous Chemicals (Present in ALL 5 techniques): 1590
+2026-01-16 14:53:36,466 - INFO - List of ubiquitous chemicals saved to 'data/processed/bias_ubiquitous_chemicals.csv'.
+2026-01-16 14:53:36,467 - INFO - Starting Non-Ligand Frequency Analysis.
+2026-01-16 14:53:36,472 - INFO - Total Non-Ligands identified: 22934
+2026-01-16 14:53:36,533 - INFO - Top non-ligand statistics saved to 'data/processed/stats_top_non_ligands.csv'.
+2026-01-16 14:53:36,534 - INFO - Starting PCA Analysis.
+2026-01-16 14:53:36,540 - INFO - Filtering for 'Ligand' role: 15694 compounds remain.
+2026-01-16 14:53:36,544 - INFO - Data points available after removing NaNs: 14981
+2026-01-16 14:53:36,556 - INFO - Explained Variance: PC1=0.58, PC2=0.22
+2026-01-16 14:53:36,557 - INFO - PCA Loadings computed.
+2026-01-16 14:53:37,789 - INFO - PCA plots saved to 'figures/chemometrics/'
+2026-01-16 14:53:37,790 - INFO - Starting K-Means Clustering Analysis.
+2026-01-16 14:53:39,974 - INFO - Clustering heatmap saved.
+2026-01-16 14:53:39,976 - INFO - Cluster Center Characteristics computed.
+2026-01-16 14:53:39,978 - INFO - Starting Statistical Hypothesis Testing.
+2026-01-16 14:53:39,986 - INFO - Comparing techniques: ['CE' 'ED' 'ITC' 'SPR' 'UV']
+2026-01-16 14:53:39,995 - INFO - Mass       | ANOVA F= 19.29 | p=7.55e-16 ***
+2026-01-16 14:53:40,334 - INFO - logP       | ANOVA F=  6.06 | p=7.15e-05 ***
+2026-01-16 14:53:40,644 - INFO - TPSA       | ANOVA F=  9.03 | p=2.81e-07 ***
+2026-01-16 14:53:40,923 - INFO - Statistical test results saved to 'data/processed/stats_significance_tests.csv'.
+2026-01-16 14:53:40,924 - INFO - Analysis completed successfully.

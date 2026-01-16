@@ -227,7 +227,7 @@ def create_ligand_properties_figure(df):
     type_markers = {'buffer': 'o', 'ligand': '*', 'solvent': 's', 'unknown': '^'}
 
     def save_scatter_plot(x_col, y_col, xlabel, ylabel, title, filename):
-        plt.figure(figsize=(10, 8))
+        plt.figure(figsize=(11, 8))  
         plot_df = df.dropna(subset=[x_col, y_col])
         
         for fam in families:
@@ -238,27 +238,34 @@ def create_ligand_properties_figure(df):
                              c=family_colors[fam], marker=marker, 
                              s=50, alpha=0.6, edgecolors='none', label=f"{fam}" if ctype == 'ligand' else "")
 
-        plt.xlabel(xlabel, fontsize=14, fontweight='bold')
-        plt.ylabel(ylabel, fontsize=14, fontweight='bold')
-        plt.title(title, fontsize=16, fontweight='bold', pad=20)
+        plt.xlabel(xlabel, fontsize=14)
+        plt.ylabel(ylabel, fontsize=14)
+        plt.title(title, fontsize=16, pad=20)
         plt.grid(True, alpha=0.2)
-        
-        # Unique legend for families
         handles, labels = plt.gca().get_legend_handles_labels()
-        by_label = dict(zip(labels, handles))
-        plt.legend(by_label.values(), by_label.keys(), title='Protein Family', bbox_to_anchor=(1.05, 1), loc='upper left')
+        family_handles = [h for h, l in zip(handles, labels) if l in families]
+        family_labels = [l for h, l in zip(handles, labels) if l in families]
         
-        plt.tight_layout()
+        leg1 = plt.legend(family_handles, family_labels, title='Protein Family', 
+                         bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0.)
+        plt.gca().add_artist(leg1)
+
+        role_handles = [plt.Line2D([], [], color='gray', marker=marker, linestyle='None',
+                                 markersize=8, label=role.capitalize()) 
+                      for role, marker in type_markers.items()]
+        
+        plt.legend(handles=role_handles, title='Chemical Role', 
+                  bbox_to_anchor=(1.02, 0.6), loc='upper left', borderaxespad=0.)
+
+        plt.tight_layout(rect=[0, 0, 0.85, 1])
         plt.savefig(f'figures/static/{filename}.png', dpi=300)
         plt.close()
         logging.info(f"Saved figures/static/{filename}.png")
 
-    # Generate Scatter Plots
     save_scatter_plot('logP', 'Mass', 'LogP', 'Molecular Weight (Da)', 'LogP vs Molecular Weight', 'LogP_vs_Mass')
     save_scatter_plot('H_bond_donors', 'H_bond_acceptors', 'H-bond Donors', 'H-bond Acceptors', 'H-bond Donors vs Acceptors', 'HDonors_vs_Acceptors')
     save_scatter_plot('TPSA', 'rotatable_bonds', 'TPSA', 'Rotatable Bonds', 'TPSA vs Rotatable Bonds', 'TPSA_vs_RotBonds')
 
-    # Generate Bar Plot
     plt.figure(figsize=(12, 8))
     props = ['logP', 'Mass', 'TPSA', 'rotatable_bonds']
     prop_colors = ['#3498db', '#e74c3c', '#2ecc71', '#f39c12']
@@ -282,9 +289,9 @@ def create_ligand_properties_figure(df):
         
         plt.bar(x_pos + i * bar_width, means, bar_width, label=prop, color=prop_colors[i], yerr=stds, capsize=2, alpha=0.8)
 
-    plt.xlabel('Protein Family', fontsize=14, fontweight='bold')
-    plt.ylabel('Normalized Value', fontsize=14, fontweight='bold')
-    plt.title('Property Distribution by Family', fontsize=16, fontweight='bold')
+    plt.xlabel('Protein Family', fontsize=14)
+    plt.ylabel('Normalized Value', fontsize=14)
+    plt.title('Property Distribution by Family', fontsize=16)
     plt.xticks(x_pos + bar_width * 1.5, families, rotation=45, ha='right')
     plt.legend(title='Properties', bbox_to_anchor=(1.05, 1), loc='upper left')
     plt.grid(True, alpha=0.2, axis='y')
@@ -309,8 +316,8 @@ def main():
     
     create_ligand_properties_figure(df)
     
-    df.to_csv('data/processed/Full_Project_Dataset.csv', index=False)
-    logging.info("Full dataset exported to data/processed/Full_Project_Dataset.csv")
+    df.to_csv('data/processed/Integrated_Physicochemical_Dataset.csv')
+    logging.info("Consolidated dataset exported to data/processed/Integrated_Physicochemical_Dataset.csv")
     print("Static visualization generation complete.")
 
 if __name__ == "__main__":

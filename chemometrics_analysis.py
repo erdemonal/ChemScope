@@ -149,7 +149,7 @@ def plot_pca_results(pca_df: pd.DataFrame, explained_variance, loadings: pd.Data
         style='Technique'
     )
     
-    plt.title(f'PCA of Chemical Space (n={len(pca_df)})', fontsize=16, fontweight='bold')
+    plt.title(f'PCA of Chemical Space (n={len(pca_df)})', fontsize=16)
     plt.xlabel(f'Principal Component 1 ({explained_variance[0]*100:.1f}%)', fontsize=14)
     plt.ylabel(f'Principal Component 2 ({explained_variance[1]*100:.1f}%)', fontsize=14)
     plt.legend(title='Technique', bbox_to_anchor=(1.05, 1), loc='upper left', frameon=True)
@@ -162,7 +162,7 @@ def plot_pca_results(pca_df: pd.DataFrame, explained_variance, loadings: pd.Data
         plt.arrow(0, 0, loadings.iloc[i, 0], loadings.iloc[i, 1], 
                  color='r', alpha=0.5, width=0.01, head_width=0.05)
         plt.text(loadings.iloc[i, 0]*1.15, loadings.iloc[i, 1]*1.15, 
-                feature, color='darkred', ha='center', va='center', fontweight='bold')
+                feature, color='darkred', ha='center', va='center')
         
     plt.xlim(-1, 1)
     plt.ylim(-1, 1)
