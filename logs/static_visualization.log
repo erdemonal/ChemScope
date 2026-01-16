@@ -1,22 +1,25 @@
-2026-01-12 21:09:20,947 - INFO - Starting Static Visualization Pipeline...
-2026-01-12 21:09:20,962 - INFO - Loaded CE: 3687 compounds
-2026-01-12 21:09:20,999 - INFO - Loaded ITC: 8771 compounds
-2026-01-12 21:09:21,059 - INFO - Loaded SPR: 16428 compounds
-2026-01-12 21:09:21,082 - INFO - Loaded UV: 6448 compounds
-2026-01-12 21:09:21,097 - INFO - Loaded ED: 3294 compounds
-2026-01-12 21:09:21,100 - INFO - Total combined compounds: 38628
-2026-01-12 21:09:21,101 - INFO - Calculating additional physicochemical properties from SMILES...
-2026-01-12 21:09:21,677 - INFO - Processed 5000/38628 compounds
-2026-01-12 21:09:22,113 - INFO - Processed 10000/38628 compounds
-2026-01-12 21:09:22,850 - INFO - Processed 15000/38628 compounds
-2026-01-12 21:09:23,269 - INFO - Processed 20000/38628 compounds
-2026-01-12 21:09:24,011 - INFO - Processed 25000/38628 compounds
-2026-01-12 21:09:24,786 - INFO - Processed 30000/38628 compounds
-2026-01-12 21:09:25,269 - INFO - Processed 35000/38628 compounds
-2026-01-12 21:09:25,779 - INFO - Assigning protein families...
-2026-01-12 21:09:26,107 - INFO - Protein family distribution: {'ion_channels': 11329, 'kinase': 10192, 'gpcrs': 9406, 'proteases': 5383, 'nuclear_receptors': 2318}
-2026-01-12 21:09:26,108 - INFO - Assigning chemical types...
-2026-01-12 21:09:26,319 - INFO - Chemical type distribution: {'ligand': 17462, 'solvent': 15704, 'buffer': 5462}
-2026-01-12 21:09:26,320 - INFO - Generating static figures...
-2026-01-12 21:09:29,578 - INFO - Static figure saved to figures/static/static_analysis_summary.png
-2026-01-12 21:09:29,944 - INFO - Full dataset exported to data/processed/Full_Project_Dataset.csv
+2026-01-16 14:43:34,173 - INFO - Starting Static Visualization Pipeline...
+2026-01-16 14:43:34,188 - INFO - Loaded CE: 3687 compounds
+2026-01-16 14:43:34,226 - INFO - Loaded ITC: 8771 compounds
+2026-01-16 14:43:34,295 - INFO - Loaded SPR: 16428 compounds
+2026-01-16 14:43:34,358 - INFO - Loaded UV: 6448 compounds
+2026-01-16 14:43:34,404 - INFO - Loaded ED: 3294 compounds
+2026-01-16 14:43:34,410 - INFO - Total combined compounds: 38628
+2026-01-16 14:43:34,412 - INFO - Calculating additional physicochemical properties from SMILES...
+2026-01-16 14:43:35,067 - INFO - Processed 5000/38628 compounds
+2026-01-16 14:43:35,541 - INFO - Processed 10000/38628 compounds
+2026-01-16 14:43:36,377 - INFO - Processed 15000/38628 compounds
+2026-01-16 14:43:36,822 - INFO - Processed 20000/38628 compounds
+2026-01-16 14:43:37,563 - INFO - Processed 25000/38628 compounds
+2026-01-16 14:43:38,477 - INFO - Processed 30000/38628 compounds
+2026-01-16 14:43:39,079 - INFO - Processed 35000/38628 compounds
+2026-01-16 14:43:39,561 - INFO - Assigning protein families...
+2026-01-16 14:43:39,928 - INFO - Protein family distribution: {'ion_channels': 11329, 'kinase': 10192, 'gpcrs': 9406, 'proteases': 5383, 'nuclear_receptors': 2318}
+2026-01-16 14:43:39,928 - INFO - Assigning chemical types...
+2026-01-16 14:43:40,200 - INFO - Chemical type distribution: {'ligand': 17462, 'solvent': 15704, 'buffer': 5462}
+2026-01-16 14:43:40,201 - INFO - Generating static figures...
+2026-01-16 14:43:40,813 - INFO - Saved figures/static/LogP_vs_Mass.png
+2026-01-16 14:43:41,388 - INFO - Saved figures/static/HDonors_vs_Acceptors.png
+2026-01-16 14:43:41,886 - INFO - Saved figures/static/TPSA_vs_RotBonds.png
+2026-01-16 14:43:42,173 - INFO - Saved figures/static/Property_Distributions.png
+2026-01-16 14:43:42,625 - INFO - Full dataset exported to data/processed/Full_Project_Dataset.csv

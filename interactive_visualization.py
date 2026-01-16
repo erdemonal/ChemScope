@@ -1,11 +1,11 @@
 """
 interactive_visualization.py
 
-This module generates interactive localization plots (using Bokeh) to visualize the
+This module generates interactive localization plots to visualize the
 chemical space of protein-ligand interactions. It maps chemicals based on their
 Molecular Weight and LogP, utilizing hexagonal binning statistics.
 
-It supports advanced features such as:
+It supports features such as:
 - Gaussian blurring for density estimation.
 - Interactive filtering by chemical class and properties.
 - TF-IDF weighting for relevance scoring.

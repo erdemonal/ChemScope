@@ -215,40 +215,51 @@ def assign_chemical_type(df):
 
 def create_ligand_properties_figure(df):
     """
-    Generates the multipanel static figure.
+    Generates individual static figures for better readability.
     """
     logging.info("Generating static figures...")
-        
+    os.makedirs('figures/static', exist_ok=True)
+    
     families = df['protein_family'].unique()
     colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b', '#e377c2', '#7f7f7f']
     family_colors = {fam: colors[i % len(colors)] for i, fam in enumerate(families)}
     
     type_markers = {'buffer': 'o', 'ligand': '*', 'solvent': 's', 'unknown': '^'}
 
-    def plot_scatter(ax, x_col, y_col, xlabel, ylabel, title):
+    def save_scatter_plot(x_col, y_col, xlabel, ylabel, title, filename):
+        plt.figure(figsize=(10, 8))
         plot_df = df.dropna(subset=[x_col, y_col])
+        
         for fam in families:
             for ctype, marker in type_markers.items():
                 subset = plot_df[(plot_df['protein_family'] == fam) & (plot_df['ChemicalType'] == ctype)]
                 if not subset.empty:
-                    ax.scatter(subset[x_col], subset[y_col], 
+                    plt.scatter(subset[x_col], subset[y_col], 
                              c=family_colors[fam], marker=marker, 
-                             s=35, alpha=0.7, edgecolors='black', linewidth=0.2)
-        ax.set_xlabel(xlabel, fontsize=11, fontweight='bold')
-        ax.set_ylabel(ylabel, fontsize=11, fontweight='bold')
-        ax.set_title(title, fontsize=12, fontweight='bold', pad=15)
-        ax.grid(True, alpha=0.3)
+                             s=50, alpha=0.6, edgecolors='none', label=f"{fam}" if ctype == 'ligand' else "")
 
-    ax1 = plt.subplot(2, 2, 1)
-    plot_scatter(ax1, 'logP', 'Mass', 'LogP', 'Molecular Weight (Da)', 'LogP vs Molecular Weight')
+        plt.xlabel(xlabel, fontsize=14, fontweight='bold')
+        plt.ylabel(ylabel, fontsize=14, fontweight='bold')
+        plt.title(title, fontsize=16, fontweight='bold', pad=20)
+        plt.grid(True, alpha=0.2)
+        
+        # Unique legend for families
+        handles, labels = plt.gca().get_legend_handles_labels()
+        by_label = dict(zip(labels, handles))
+        plt.legend(by_label.values(), by_label.keys(), title='Protein Family', bbox_to_anchor=(1.05, 1), loc='upper left')
+        
+        plt.tight_layout()
+        plt.savefig(f'figures/static/{filename}.png', dpi=300)
+        plt.close()
+        logging.info(f"Saved figures/static/{filename}.png")
 
-    ax2 = plt.subplot(2, 2, 2)
-    plot_scatter(ax2, 'H_bond_donors', 'H_bond_acceptors', 'H-bond Donors', 'H-bond Acceptors', 'H-bond Donors vs Acceptors')
+    # Generate Scatter Plots
+    save_scatter_plot('logP', 'Mass', 'LogP', 'Molecular Weight (Da)', 'LogP vs Molecular Weight', 'LogP_vs_Mass')
+    save_scatter_plot('H_bond_donors', 'H_bond_acceptors', 'H-bond Donors', 'H-bond Acceptors', 'H-bond Donors vs Acceptors', 'HDonors_vs_Acceptors')
+    save_scatter_plot('TPSA', 'rotatable_bonds', 'TPSA', 'Rotatable Bonds', 'TPSA vs Rotatable Bonds', 'TPSA_vs_RotBonds')
 
-    ax3 = plt.subplot(2, 2, 3)
-    plot_scatter(ax3, 'TPSA', 'rotatable_bonds', 'TPSA', 'Rotatable Bonds', 'TPSA vs Rotatable Bonds')
-
-    ax4 = plt.subplot(2, 2, 4)
+    # Generate Bar Plot
+    plt.figure(figsize=(12, 8))
     props = ['logP', 'Mass', 'TPSA', 'rotatable_bonds']
     prop_colors = ['#3498db', '#e74c3c', '#2ecc71', '#f39c12']
     
@@ -269,26 +280,19 @@ def create_ligand_properties_figure(df):
             else:
                 means.append(0); stds.append(0)
         
-        ax4.bar(x_pos + i * bar_width, means, bar_width, label=prop, color=prop_colors[i], yerr=stds, capsize=2, alpha=0.8)
+        plt.bar(x_pos + i * bar_width, means, bar_width, label=prop, color=prop_colors[i], yerr=stds, capsize=2, alpha=0.8)
 
-    ax4.set_xlabel('Protein Family', fontsize=11, fontweight='bold')
-    ax4.set_ylabel('Normalized Value', fontsize=11, fontweight='bold')
-    ax4.set_title('Property Distribution by Family', fontsize=12, fontweight='bold')
-    ax4.set_xticks(x_pos + bar_width * 1.5)
-    ax4.set_xticklabels(families, rotation=45, ha='right')
-    ax4.legend()
-    ax4.grid(True, alpha=0.3, axis='y')
-
-    legend_handles = [plt.Line2D([], [], marker='o', color='w', markerfacecolor=family_colors[f], label=f, markersize=10) for f in families]
-    ax1.legend(handles=legend_handles, title='Protein Family', bbox_to_anchor=(1.05, 1), loc='upper left')
-
-    plt.tight_layout()
-    plt.subplots_adjust(top=0.93, right=0.85)
+    plt.xlabel('Protein Family', fontsize=14, fontweight='bold')
+    plt.ylabel('Normalized Value', fontsize=14, fontweight='bold')
+    plt.title('Property Distribution by Family', fontsize=16, fontweight='bold')
+    plt.xticks(x_pos + bar_width * 1.5, families, rotation=45, ha='right')
+    plt.legend(title='Properties', bbox_to_anchor=(1.05, 1), loc='upper left')
+    plt.grid(True, alpha=0.2, axis='y')
     
-    os.makedirs('figures/static', exist_ok=True)
-    plt.savefig('figures/static/static_analysis_summary.png', dpi=300)
-    plt.show()
-    logging.info("Static figure saved to figures/static/static_analysis_summary.png")
+    plt.tight_layout()
+    plt.savefig('figures/static/Property_Distributions.png', dpi=300)
+    plt.close()
+    logging.info("Saved figures/static/Property_Distributions.png")
 
 
 def main():

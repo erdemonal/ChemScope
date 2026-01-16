@@ -5,9 +5,6 @@ This module implements the chemometric analysis pipeline for the ChemScope proje
 It performs data consolidation, multivariate analysis (PCA), clustering (K-Means),
 statistical hypothesis testing (ANOVA, T-tests), and bias quantification.
 
-The analysis is designed to address specific reviewer comments regarding the lack of
-chemometric depth and quantitative rigor in the original manuscript.
-
 Dependencies: pandas, matplotlib, seaborn, scikit-learn, scipy
 """
 
@@ -75,7 +72,7 @@ def load_all_data() -> pd.DataFrame:
 
 def perform_pca_and_loadings(df: pd.DataFrame):
     """
-    Performs Principal Component Analysis (PCA) to visualize the chemical space distribution
+    Performs Principal Component Analysis to visualize the chemical space distribution
     and computes feature importance (loadings).
 
     Args:
