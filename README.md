@@ -1,8 +1,6 @@
 # ChemScope
 
 This repository contains the code used in the study [Text Mining-Based Profiling of Chemical Environments in Protein–Ligand Binding Assays Across Analytical Techniques](https://doi.org/10.1016/j.chemolab.2026.105659).
-  
-The scripts implement processing of literature data, physicochemical descriptor calculation, and chemometric analyses used to compare ligand chemical space across experimental techniques.
 
 ## Data Availability
 The data used in this study is available at:
@@ -23,13 +21,13 @@ pip install -r requirements.txt
 ## Reproducing the Analysis
 
 ### Fetch Resources
-Download essential chemical property datasets from OSF (Required as `data/raw` is not version controlled).
+Download chemical property datasets from OSF (Required as `data/raw` is not version controlled).
 ```bash
 python fetch_resources.py
 ```
 
 ### Literature Mining
-Mine Europe PMC for new protein-ligand associations. 
+Mine Europe PMC for protein-ligand associations. 
 Define your search queries in `queries.txt` (format: `Name, "Search Query"`).
 Example:
 ```text
