@@ -5,7 +5,9 @@ This repository contains the code used in the study [Text Mining-Based Profiling
 The scripts implement processing of literature data, physicochemical descriptor calculation, and chemometric analyses used to compare ligand chemical space across experimental techniques.
 
 ## Data Availability
-The data used in this study is available at [Dataset](https://huggingface.co/datasets/erdemonal/ChemScope-Dataset)
+The data used in this study is available at:
+- Hugging Face: [ChemScope-Dataset](https://huggingface.co/datasets/erdemonal/ChemScope-Dataset) 
+- GitHub: [Integrated_Physicochemical_Dataset.csv](data/processed/Integrated_Physicochemical_Dataset.csv)
 
 ## Requirements
 Python ≥ 3.8  
