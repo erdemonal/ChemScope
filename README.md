@@ -1,11 +1,11 @@
 # ChemScope
 
-This repository contains the code used in the study "Text Mining-Based Profiling of Chemical Environments in Protein–Ligand Binding Assays Across Analytical Techniques."
+This repository contains the code used in the study [Text Mining-Based Profiling of Chemical Environments in Protein–Ligand Binding Assays Across Analytical Techniques](https://doi.org/10.1016/j.chemolab.2026.105659).
   
 The scripts implement processing of literature data, physicochemical descriptor calculation, and chemometric analyses used to compare ligand chemical space across experimental techniques.
 
 ## Data Availability
-The data used in this study is available at [Dataset](https://github.com/erdemonal/ChemScope/blob/main/data/processed/Integrated_Physicochemical_Dataset.csv)
+The data used in this study is available at [Dataset](https://huggingface.co/datasets/erdemonal/ChemScope-Dataset)
 
 ## Requirements
 Python ≥ 3.8  
@@ -56,4 +56,26 @@ python static_visualization.py
 ### Interactive Visualization
 ```bash
 python interactive_visualization.py -i data/processed
+```
+
+## Citation
+If you use this code in your research, please cite the following paper:
+
+**Text Mining-Based Profiling of Chemical Environments in Protein–Ligand Binding Assays Across Analytical Techniques**  
+Erdem Önal, Zeynep Kalaycıoğlu  
+*Chemometrics and Intelligent Laboratory Systems*, 2026, 105659  
+[DOI: 10.1016/j.chemolab.2026.105659](https://doi.org/10.1016/j.chemolab.2026.105659)
+
+### BibTeX
+```bibtex
+@article{ONAL2026105659,
+title = {Text Mining-Based Profiling of Chemical Environments in Protein–Ligand Binding Assays Across Analytical Techniques},
+journal = {Chemometrics and Intelligent Laboratory Systems},
+pages = {105659},
+year = {2026},
+issn = {0169-7439},
+doi = {https://doi.org/10.1016/j.chemolab.2026.105659},
+url = {https://www.sciencedirect.com/science/article/pii/S0169743926000328},
+author = {Erdem Önal and Zeynep Kalaycıoğlu},
+keywords = {Affinity, bibliometrics, drug, visualization}
 ```

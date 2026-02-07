@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Önal"
+  given-names: "Erdem"
+- family-names: "Kalaycıoğlu"
+  given-names: "Zeynep"
+title: "ChemScope: Text Mining-Based Profiling of Chemical Environments in Protein–Ligand Binding Assays"
+version: 1.0.0
+date-released: 2026-02-05
+url: "https://github.com/erdemonal/ChemScope"
+preferred-citation:
+  type: article
+  authors:
+  - family-names: "Önal"
+    given-names: "Erdem"
+  - family-names: "Kalaycıoğlu"
+    given-names: "Zeynep"
+  doi: "10.1016/j.chemolab.2026.105659"
+  journal: "Chemometrics and Intelligent Laboratory Systems"
+  title: "Text Mining-Based Profiling of Chemical Environments in Protein–Ligand Binding Assays Across Analytical Techniques"
+  year: 2026
+  start: 105659
+  issn: "0169-7439"
+  url: "https://www.sciencedirect.com/science/article/pii/S0169743926000328"
+keywords:
+  - Affinity
+  - bibliometrics
+  - drug
+  - visualization
+abstract: >-
+  Protein–ligand binding studies are critical in drug discovery and development, as they offer valuable insights into molecular interactions that underlie biological function, disease mechanisms, and therapeutic effects. The potential of combining text mining with cheminformatics to explore trends in protein–ligand binding studies across a range of analytical techniques was evaluated in this study. Six widely used analytical techniques were selected to reveal important patterns. Utilizing an open-source Python platform (SCOPE), we analyzed over 33,000 scientific articles and more than 1.3 million chemical entities. The resulting data were visualized as two-dimensional hexbin plots, revealing trends in hydrophobicity (log P)–molecular weight (Da) for each technique. Instead of focusing solely on ligands, this study aims to characterize the overall chemical environments—including solvents, buffers, and supporting agents—associated with protein–ligand binding assays. By analyzing the physicochemical properties of compounds reported across different analytical techniques, we highlight how method-specific preferences shape the experimental design landscape. The analysis integrates unsupervised K-means clustering, multivariate principal component analysis (PCA), and nonparametric statistical testing to quantitatively compare technique-associated chemical spaces. Moreover, this study offers a data-driven perspective on methodologies and historical trends in protein–ligand binding research. It is positioned as a data-driven, method-centric literature analysis rather than a traditional narrative review.
