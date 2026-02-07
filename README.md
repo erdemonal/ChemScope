@@ -63,7 +63,7 @@ python interactive_visualization.py -i data/processed
 ## Citation
 If you use this code in your research, please cite the following paper:
 
-**Text Mining-Based Profiling of Chemical Environments in Protein–Ligand Binding Assays Across Analytical Techniques**  
+Text Mining-Based Profiling of Chemical Environments in Protein–Ligand Binding Assays Across Analytical Techniques
 Erdem Önal, Zeynep Kalaycıoğlu  
 *Chemometrics and Intelligent Laboratory Systems*, 2026, 105659  
 [DOI: 10.1016/j.chemolab.2026.105659](https://doi.org/10.1016/j.chemolab.2026.105659)
