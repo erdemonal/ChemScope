@@ -7,11 +7,9 @@ The data used in this study is available at:
 - Hugging Face: [ChemScope-Dataset](https://huggingface.co/datasets/erdemonal/ChemScope-Dataset) 
 - GitHub: [Integrated_Physicochemical_Dataset.csv](data/processed/Integrated_Physicochemical_Dataset.csv)
 
-## Requirements
-Python ≥ 3.8  
-Dependencies are listed in `requirements.txt`.
-
 ## Setup
+In order to run the project, you will need Python 3.8 or above. The required libraries listed in `requirements.txt` must be installed.
+
 ```bash
 git clone https://github.com/erdemonal/ChemScope.git
 cd ChemScope
@@ -23,7 +21,7 @@ pip install -r requirements.txt
 ### Fetch Resources
 Download chemical property datasets from OSF (Required as `data/raw` is not version controlled).
 ```bash
-python fetch_resources.py
+python scripts/fetch_resources.py
 ```
 
 ### Literature Mining
@@ -35,27 +33,27 @@ ITC, "isothermal titration calorimetry" AND ("protein-ligand binding" OR "bindin
 ```
 Run the miner:
 ```bash
-python literature_mining.py
+python scripts/literature_mining.py
 ```
 
 ### Data Processing
 ```bash
-python data_processing.py -i data/interim -t folder
+python scripts/data_processing.py -i data/interim -t folder
 ```
 
 ### Chemometric Analysis
 ```bash
-python chemometrics_analysis.py
+python scripts/chemometrics_analysis.py
 ```
 
 ### Static Visualization
 ```bash
-python static_visualization.py
+python scripts/static_visualization.py
 ```
 
 ### Interactive Visualization
 ```bash
-python interactive_visualization.py -i data/processed
+python scripts/interactive_visualization.py -i data/processed
 ```
 
 ## Citation
